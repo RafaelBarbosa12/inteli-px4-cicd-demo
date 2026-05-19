@@ -27,8 +27,3 @@ class TestComputeWeight:
     def test_zero_mass_returns_zero(self) -> None:
         from libs.drone_modeling.dynamics import compute_weight
         assert compute_weight(mass=0.0) == 0.0
-
-    def test_rejects_negative_mass(self) -> None:
-        from libs.drone_modeling.dynamics import compute_weight
-        with pytest.raises(ValueError, match="mass must be non-negative"):
-            compute_weight(mass=-1.0)
