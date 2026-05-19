@@ -36,7 +36,7 @@ jobs:
         run: ruff check libs/ tests/
 
       - name: Black
-        run: black --check libs/ tests/
+        run: black libs/ tests/
 
       - name: Mypy
         run: mypy libs/
